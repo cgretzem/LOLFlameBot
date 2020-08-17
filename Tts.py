@@ -27,7 +27,7 @@ def delSpeech(path):
 
 
 def main():
-    exampleText = 'Hullo, this is a test retard'
+    exampleText = 'Hullo, this is a test'
     lang = 'en-tz'
     speech = gTTS(text = exampleText, lang = lang, slow = False)
     path = './Speech/bonk.mp3'
