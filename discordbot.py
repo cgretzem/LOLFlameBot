@@ -8,6 +8,7 @@ from leaguepkg.active import RequestError
 from Tts import getSpeech, delSpeech
 
 Token = 'NzI0NDAxMTA5NjE1MTE2MzAw.XxFIuQ.2SdIm74Ab9q1jaXXng1HIjrjn8o'
+#GET A NEW TOKEN 
 runLeague = True
 
 bot = commands.Bot(command_prefix = "#")
