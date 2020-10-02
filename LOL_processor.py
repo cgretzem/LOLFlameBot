@@ -13,23 +13,7 @@ class Game():
         self.current = self.game.getLastEvent()
     def getRoast(self, VictimName):
         roasts = []
-        roasts.append( "{}, I suggest you go to Practice Mode to learn how to play. PLEASE! You suck balls my guy!".format(VictimName))
-        roasts.append( "{}, go back to playing C S GO. Wait. Are you even good at C S GO?".format(VictimName))
-        roasts.append( "{}, Can you like do something with your life other than League? You are legit trash".format(VictimName))
-        roasts.append( "Oh my God. {} I cannot watch this game anymore. All of you are terrible.".format(VictimName))
-        roasts.append( "{}, Just stop playing. Please.".format(VictimName))
-        roasts.append( "Holy shit {}. Can you land anything? Next game, I don't want to see you in the lobby".format(VictimName))
-        roasts.append( "God damn you are so fucking trash {}".format(VictimName))
-        roasts.append( "Wow {}, You know it's a shame you play so much League but you are still trash.".format(VictimName))
-        roasts.append( "{}, play any other game other than League, please.".format(VictimName))
-        roasts.append( "Just don't play League again {}. Just please. I hate watching you play like shit.".format(VictimName))
-        roasts.append( "You're a fucking piece of shit {}. You know that?".format(VictimName))
-        roasts.append( "YOU. ARE. SHIT {}.".format(VictimName))
-        roasts.append( "{} Just stop. PLEASEEEEEE.!".format(VictimName))
-        roasts.append( "Get shit on {}".format(VictimName))
-        roasts.append( "God damn. you suck {}".format(VictimName))
-        roasts.append( "{} Stop playing. Just leave. The rest of your team does better without you feeding.".format(VictimName))
-        roasts.append( "{}, You're the biggest Troglydite I have ever seen. Only someone with the IQ of an ape could have died there.".format(VictimName))
+        # ADD CUSTOM ROASTS HERE!
         return random.choice(roasts)
     
     def findPlayer(self, playerName):
@@ -40,12 +24,7 @@ class Game():
 
     def getComp(self, KillerName):
         comps = []
-        comps.append("Damn {}, you actually managed to kill someone".format(KillerName))
-        comps.append("Those are some clean {} mechanics, {}".format(self.findPlayer(self.findSummoner(KillerName)).champion_name, KillerName))
-        comps.append("I really thought you were gonna hard int this game. Oh well, its {}. You still have time to throw".format(KillerName))
-        comps.append('{} is a dirty smurf'.format(KillerName))
-        comps.append('Good job abusing someone with the IQ of a 3 year old, {}'.format(KillerName))
-        comps.append('{} hit that guy with the patented {} {}'.format(KillerName, self.findPlayer(self.findSummoner(KillerName)).champion_name, self.findPlayer(self.findSummoner(KillerName)).position))
+        # ADD CUSTOM COMPLIMENTS HERE
         return random.choice(comps)
 
     def checkFriends(self, friendName):
@@ -161,10 +140,10 @@ class Game():
 
         
         if self.current['InhibRespawned'] in inhibs[self.game.active_player.team]:
-            response = 'You managed to survive long enough for you inhib to respawn, good job monkeys'
+            response = 'You managed to survive long enough for you inhib to respawn'
         
         else:
-            response = 'The enemies inhib respawned, all that work for nothing. Good job, Troggs'
+            response = 'The enemies inhib respawned, all that work for nothing.'
         
         return response
 
